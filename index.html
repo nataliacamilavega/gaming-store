@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo de la pestaña -->
+    <link rel="icon" href="./assets/logoPage.svg">
+
+    <!-- Hojas de estilo en cascada -->
+    <link rel="stylesheet" href="./index/styles.css">
+    <link rel="stylesheet" href="./index/mediaqueries.css">
+
+    <!-- iconos de FontAwesome -->
+    <script src="https://kit.fontawesome.com/69ab8990bd.js" crossorigin="anonymous"></script>
+
+    <title>Gaming Store</title>
+    
+</head>
+<body>
+<!-- HEADER -->
+    <header class="nav-fixed"">
+        <div class="overlayMenu" href="" ></div>
+        <nav class="navigationBar">
+            <i class="fa-solid fa-bars menu"></i>
+            
+            <!-- opciones menu izquierda -->
+            <ul class="menuoption-list menu-container">
+
+                <i class="fa-solid fa-xmark close-menu close"></i>
+
+                <li class="option close"><a href="#hero-section" class="close">Home</a></li>
+                <li class="option close"><a href="#htb-section" class="close">How to buy</a></li>
+                <li class="option close"><a href="#store-section" class="close">Store</a></li>
+                <!-- opciones menu desplegable mobile -->
+                <p class="user-name-welcome-mobile"></p>
+                <li class="loginButtonMobile" >Login</li>
+                <li class="logoutButtonMobile" >Log out</li>
+            </ul>
+            <!-- Logo header -->
+            <a href="#hero-section" class="gaming-logo"><img src="./assets/gamingstore-logo.svg" alt=""></a>
+
+             <!-- opciones menu derecha -->
+            <ul class="menuoption-list second-ml">
+                <li class="iconOption cartButton"><img src="./assets/cartIcon.png" alt="Cart logo, Shop"><p>Cart</p> </li>
+                <li class="iconOption loginButton"><img src="./assets/userIcon.png" alt="User logo, Login"> Login</li>
+
+                <!-- opcion usuario logueado -->
+                <li class="iconOption userButton" style="display:none;">
+                    <p class="user-name-welcome"></p>
+                    <div class="userprofile">
+                        <ul>
+                            <li class="logoutBtn" data-userid="">Log out</li>
+                        </ul>
+                      </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- CARRITO -->
+        <div class="cart">
+            
+            <i class="fa-solid fa-xmark close-cart"></i>
+
+            <!-- contenedor carrito -->
+            <div class="cart-container">
+                <h2>Shopping Cart</h2>
+                <!-- card producto -->
+                <div class="cart-products-container">
+                </div>
+                <!-- total price -->
+                <div class="total-product-container">
+                    <p><b>Total:</b> <span class="total">0</span></p>
+                    <button class="buy-btn">buy</button>
+                    <button class="empty-btn">empty cart</button>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- FIN HEADER -->
+
+<!-- MAIN -->
+    <main>
+<!-- HERO SECTION -->
+        <section class="hero-section" id="hero-section">
+            <!-- CARROUSEL -->
+            <article class="carrouselinfo-container" id="carousel">
+                <!-- boton previous -->
+                <div class="button-slider-container" id="previousVideo">
+                    <img src="./assets/bannerHeroAssets/back-arrow.png" alt="">
+                </div>
+
+                    <!-- FICHA-GAME -->
+                    <div class="game-info" id="game-info">
+                        <!-- descripcion del juego banner -->
+                        <div class="logoAndDescription">
+                            <img src="" id="gameLogo" alt="">
+                            <p id="game-banner-description"></p>
+                            <button class="add-btn btn-banner">add to cart</button>
+                        </div>
+
+                        <div class="genresAndVolume">
+                            <i class="fa-solid fa-volume-xmark volume"></i>
+                            <div id="genres"></div>
+                        </div>
+                        
+                    </div>
+                <!-- boton next  -->
+                <div class="button-slider-container" id="nextVideo">
+                    <img src="./assets/bannerHeroAssets/next-arrow.png" alt="">
+                </div>
+
+            </article>
+            <!-- VIDEO DINAMICO CARRUSEL -->
+            <video class="video" autoplay id="videoPlayer">
+                <source src="" type="video/mp4" id="video"/>
+            </video>
+        </section>
+<!-- FIN HERO SECTION -->
+
+<!-- HOW TO BUY SECTION -->
+        <section class="htb-section" id="htb-section">
+            <h2>HOW TO BUY</h2>
+            <article class="steps-container">
+                <!-- PASO 1 -->
+                <div class="step-container">
+                    <div class="step-title">
+                        <h3>1</h3>
+                        <img src="./assets/gamer1.png" alt="">
+                    </div>
+                    <p>Go to the store section and 
+                        select a category or see all the games we have.</p>
+                </div>
+                <!-- PASO 2 -->
+                <div class="step-container">
+                    <div class="step-title">
+                        <h3>2</h3>
+                        <img src="./assets/gamer2.png" alt="">
+                    </div>
+                    <p>When you have chosen a game, add to the cart.</p>
+                </div>
+                <!-- PASO 3 -->
+                <div class="step-container">
+                    <div class="step-title">
+                        <h3>3</h3>
+                        <img src="./assets/gamer3.png" alt="">
+                    </div>
+                    <p>Manage your selected games in the cart and complete your purchase,</p>
+                </div>
+            </article>
+        </section>
+
+<!-- STORE SECTION -->
+        <section class="store-section" id="store-section">
+            <h1>STORE</h1>
+            <!-- filtros -->
+            <article class="filter-container">
+                <p class="filter active" data-filter="allgames">All games</p>
+                <!-- <p class="filter" data-filter="top2022">Top 2022</p> -->
+                <p class="filter" data-filter="adventure">Adventure</p>
+                <p class="filter" data-filter="action">Action</p>
+                <p class="filter" data-filter="indie">Indie</p>
+                <p class="filter" data-filter="role-playing-games-rpg">RPG</p>
+                <p class="filter" data-filter="shooter">Shooter</p>
+                <p class="filter" data-filter="simulation">Simulation</p>
+                <p class="filter" data-filter="sports">Sports</p>
+            </article>
+            <!-- contenedor de juegos renderizados -->
+            <article class="cardsGame-container">
+                <!-- juegos renderizados -->
+            </article>
+            <!-- paginación de juegos -->
+            <div class="locationPageStore">Showing page <small class="locationPageStoreNumber">1</small> of 6</div>
+            <div class="pageControl">
+                <button class="pageprevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <p class="pageNumber">1</p>
+                <button class="pagenextBtn"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </section>
+<!-- FIN STORE -->
+    </main>
+<!-- FIN MAIN -->
+    <!-- modal agregar juegos -->
+    <div class="add-modal"></div>
+<!-- FOOTER -->
+    <footer class="footer-section">
+        
+        <ul class="redes-footer">
+                <a href=""></a>
+                <li><a href="https://www.linkedin.com/in/natalia-camila-vega-74783b228/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/nataliavega98" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-square-behance"target="_blank"></i></a></li>
+        </ul>
+        <p>Designed and developed by Natalia Vega</p>
+    </footer>
+<!-- FIN FOOTER -->
+
+<!-- ARCHIVOS JAVASCRIPT -->
+    <script src="./index/dataBanner.js"></script>
+    <script src="./index/index.js"></script>
+    <script src="./index/manageProduct.js"></script>
+    <script src="./index/cart.js"></script>
+</body>
+</html> 

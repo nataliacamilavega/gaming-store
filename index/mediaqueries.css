@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --background: #121212;
+  --button-cart-active: #b535f6;
+  --button-cart-enabled: #b535f6b2;
+  --button-cart-disabled: #9d8ca6;
+  --white: #ffffff;
+  --whiteInactive: #ffffffd0;
+  --white-glass: #ffffff0f;
+  --card-background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05)
+    ),
+    #121212;
+
+  --light-purple: #d175ff80;
+}
+
+@media (max-width: 1024px) {
+  .game-info {
+    gap: 24px;
+    padding: 0px;
+  }
+  .button-slider-container {
+    height: 50%;
+    width: 25vw;
+    background: none;
+  }
+  #nextVideo:hover,
+  #previousVideo:hover {
+    background: none;
+  }
+  .gaming-logo {
+    width: 19%;
+  }
+
+  .cardsGame-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 730px) {
+  .game-info,
+  .navigationBar,
+  .htb-section,
+  .store-section,
+  .footer-section {
+    padding: 0 60px;
+  }
+  .game-info {
+    gap: 24px;
+    padding: 0px;
+  }
+  .gaming-logo img {
+    display: none;
+  }
+  .gaming-logo {
+    background-image: url(../assets/logoPage.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    width: 100px;
+  }
+  .cardGame {
+    flex: 0 0 260px;
+  }
+  .cardGameInfo {
+    font-size: 13px;
+    gap: 8px;
+  }
+  .recommendedSystem {
+    height: 170px;
+  }
+
+  /* menu hamburguesa  */
+  .option a:hover,
+  .option:hover {
+    text-decoration: none;
+    text-underline-offset: none;
+  }
+  i.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteInactive);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .loginButton {
+    display: none;
+  }
+
+  li.loginButtonMobile {
+    display: block;
+    background-color: white;
+    border-radius: 4px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    /* justify-self: center; */
+    padding: 8px;
+    width: 100%;
+  }
+
+  .logoutButtonMobile {
+
+    width: 100%;
+    border: 1px solid #ff5170;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 700;
+    text-align: center;
+    color: #ff5170;
+  }
+
+  .cartButton {
+    font-size: 24px;
+  }
+  .cartButton p {
+    display: none;
+  }
+  .menu-container {
+    display: none;
+  }
+  .open-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 25;
+    height: 100vh;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background: rgb(18 18 18 / 60%);
+    backdrop-filter: blur(25px);
+
+    font-style: normal;
+    color: var(--whiteInactive);
+
+    padding: 32px;
+
+    gap: 32px;
+    overflow-y: auto;
+
+    z-index: 25;
+    /* 
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99); */
+  }
+  .close-menu {
+    background-color: var(--light-purple);
+    padding: 4px;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    width: 24px;
+    height: 24px;
+
+    text-align: center;
+
+    align-self: end;
+  }
+
+  .option {
+    border-bottom: solid 1px var(--whiteInactive);
+    padding-bottom: 16px;
+
+    width: 100%;
+  }
+  .navigationBar {
+    z-index: 25;
+  }
+
+  i.close-menu {
+    display: block;
+  }
+
+  .carrouselinfo-container {
+    font-size: 14px;
+  }
+
+  .logoAndDescription img {
+    width: 200px;
+    height: 63px;
+  }
+  .logoAndDescription button {
+    width: 100%;
+  }
+  .loginButton {
+    display: none;
+  }
+  /* //carrito */
+  .product-quantity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  .products-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    height: 190px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .products-container img {
+    border-radius: 7px;
+    height: 100px;
+    width: 90px;
+    object-fit: cover;
+  }
+  .product-info-container {
+    flex-direction: column;
+    height: 190px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-info,
+  .navigationBar,
+  .htb-section,
+  .store-section,
+  .footer-section {
+    padding: 0 15px;
+  }
+  #game-banner-description {
+    display: none;
+  }
+  .game-info {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 10px;
+    align-items: flex-start;
+    height: 30%;
+  }
+  .carrouselinfo-container {
+    gap: 0px;
+  }
+  .logoAndDescription {
+    width: 100%;
+  }
+  .genresAndVolume {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  #genres {
+    justify-content: flex-start;
+  }
+  .cart {
+    width: 100vw;
+  }
+  .menu-container {
+    width: 100vw;
+  }
+  .button-slider-container {
+    height: 50%;
+    width: 25vw;
+    background: none;
+  }
+  .logoAndDescription button {
+    width: 200px;
+  }
+  .hero-section::before {
+    width: 100%;
+  }
+  .game-info {
+    padding: 0;
+    width: 100%;
+  }
+  .logoAndDescription button {
+    width: 100%;
+  }
+  .logoAndDescription img {
+    width: 100%;
+  }
+  .cardGameLoading{
+    flex: 0 0 260px;
+
+  }
+}
+@media (max-width: 400px) {
+  
+}
